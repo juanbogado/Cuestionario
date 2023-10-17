@@ -8,28 +8,23 @@
     </head>
     <body>
         <h1>Cuestionario</h1>
-        <div class="cuestionarioclase">
-        <div id="inicio-container">
-            <h2>Bienvenido al cuestionario</h2>
-            <label for="nombre">Ingresa tu nombre:</label>
-            <input type="text" id="nombre" placeholder="Nombre">
-            <button id="iniciar">Comenzar cuestionario</button>
-        </div>
+        <div class="container">
+            <h1>Bienvenido al cuestionario</h1>
+            <p>Ingresa tu nombre para comenzar:</p>
+            <input type="text" id="nombreInput" placeholder="Tu nombre">
+            <button id="iniciarBtn">Comenzar cuestionario</button>
     
-        <!-- Contenedor para mostrar el cuestionario -->
-        <div id="cuestionario-container" style="display: none;">
-            <h3 id="pregunta"></h3>
-            <ul id="opciones"></ul>
-            <input type="number" id="respuesta" placeholder="Ingrese el número de su respuesta">
-            <button id="submit">Enviar respuesta</button>
-        </div>
+            <div id="cuestionario" style="display: none;">
+                <h2 id="pregunta"></h2>
+                <div id="opciones"></div>
+                <button id="siguienteBtn" style="display: none;">Siguiente</button>
+            </div>
     
-        <!-- Contenedor para mostrar el resultado y tabla de posiciones -->
-        <div id="resultado-container" style="display: none;">
-            <div id="resultado"></div>
-            <h2>Tabla de Posiciones (Top 3)</h2>
-            <ol id="tabla-posiciones"></ol>
-        </div>
+            <div id="resultado" style="display: none;">
+                <h2>Resultado del cuestionario</h2>
+                <p id="puntaje"></p>
+                <button id="reiniciarBtn">Reiniciar cuestionario</button>
+            </div>
         </div>
         <!-- Script de JavaScript -->
         <script src="./index.js"></script>

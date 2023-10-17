@@ -3,16 +3,27 @@
     margin: 0;
     box-sizing: border-box;  
     background-color: rgb(212, 234, 253);
-    font-family:'Times New Roman', Times, serif;
 }
 
-h1{
-    display: flex;
-    justify-content: center;
-    padding: 16px;
+
+body {
+    font-family: Arial, sans-serif;
 }
-.cuestionarioclase{
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
     display: flex;
     justify-content: center;
     padding: 16px;
+    font-size: 24px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
 }
