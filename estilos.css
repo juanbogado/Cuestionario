@@ -2,9 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;  
-    background-color: rgb(212, 234, 253);
+    background-color: #fefae0;
 }
-
 
 body {
     font-family: Arial, sans-serif;
@@ -15,7 +14,6 @@ body {
     padding: 20px;
     text-align: center;
 }
-
 h1 {
     display: flex;
     justify-content: center;
@@ -23,7 +21,24 @@ h1 {
     font-size: 24px;
 }
 
-button {
+p{
     padding: 10px;
+}
+button {
+    padding: 10px 10px;
+    border-radius: 20px;
     font-size: 16px;
+}
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
 }

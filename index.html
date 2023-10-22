@@ -7,11 +7,10 @@
         <title>Cuestionario</title>
     </head>
     <body>
-        <h1>Cuestionario</h1>
         <div class="container">
             <h1>Bienvenido al cuestionario</h1>
             <p>Ingresa tu nombre para comenzar:</p>
-            <input type="text" id="nombreInput" placeholder="Tu nombre">
+            <input type="text" id="nombreInput" placeholder="Ingrese su nombre">
             <button id="iniciarBtn">Comenzar cuestionario</button>
     
             <div id="cuestionario" style="display: none;">
@@ -24,6 +23,12 @@
                 <h2>Resultado del cuestionario</h2>
                 <p id="puntaje"></p>
                 <button id="reiniciarBtn">Reiniciar cuestionario</button>
+                <table id="puntajes">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Puntaje</th>
+                    </tr>
+                </table>
             </div>
         </div>
         <!-- Script de JavaScript -->

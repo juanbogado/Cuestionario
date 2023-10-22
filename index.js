@@ -1,3 +1,4 @@
+
 // Datos del cuestionario
 const preguntas = [
     {
@@ -30,6 +31,7 @@ const siguienteBtn = document.getElementById("siguienteBtn");
 const resultado = document.getElementById("resultado");
 const puntajeElement = document.getElementById("puntaje");
 const reiniciarBtn = document.getElementById("reiniciarBtn");
+const tablaPuntajes = document.getElementById("puntajes");
 
 // Al hacer clic en el botón de inicio
 iniciarBtn.addEventListener("click", () => {
@@ -80,6 +82,15 @@ function mostrarResultado() {
     const puntajesAnteriores = JSON.parse(localStorage.getItem("puntajes")) || [];
     puntajesAnteriores.push({ nombre, puntaje });
     localStorage.setItem("puntajes", JSON.stringify(puntajesAnteriores));
+
+    // Mostrar los puntajes en una tabla
+    puntajesAnteriores.forEach((registro) => {
+        const row = tablaPuntajes.insertRow();
+        const cellNombre = row.insertCell(0);
+        const cellPuntaje = row.insertCell(1);
+        cellNombre.textContent = registro.nombre;
+        cellPuntaje.textContent = registro.puntaje;
+    });
 }
 
 // Reiniciar el cuestionario
@@ -96,4 +107,20 @@ function reiniciarCuestionario() {
     nombreInput.value = "";
     nombre = "";
     mostrarPregunta();
+    limpiarTabla();
 }
+
+// Limpiar la tabla de puntajes
+function limpiarTabla() {
+    const rowCount = tablaPuntajes.rows.length;
+    for (let i = rowCount - 1; i > 0; i--) {
+        tablaPuntajes.deleteRow(i);
+    }
+}
+
+// Comprobar si hay puntajes almacenados
+const puntajesAlmacenados = JSON.parse(localStorage.getItem("puntajes"));
+if (puntajesAlmacenados) {
+    mostrarPuntajes(puntajesAlmacenados);
+
+  }
